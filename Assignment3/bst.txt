@@ -1,0 +1,175 @@
+class node<K,T>{
+	node<K,T> left;
+	node<K,T> right;
+	T data;
+	K key;
+	node(K key,T data){
+		this.key=key;
+		this.data=data;
+		left=null;
+		right=null;
+	}
+	
+}
+class bst {
+	static int insertcounter=0;
+	static int deletecounter=0;
+	static int updatecounter=0;
+	static String address="";
+	node<String,student> root;
+	bst(){
+		root=null;
+	}
+	int insert(String key,node<String,student> obj) {
+		insertcounter=0;
+		root=inserthelp(root,key,obj);
+		return insertcounter;		
+	}
+	node<String,student> inserthelp(node<String,student> root,String key, node<String,student> new_node ) {
+		
+		if(root==null) {
+			root=new_node;
+		}
+		else if(key.compareTo(new_node.key)>0) {
+			insertcounter++;
+			root.right=inserthelp(root.right,key,new_node);
+		}
+		else {
+			insertcounter++;
+			root.left=inserthelp(root.left,key,new_node);
+		}
+		return root;
+	}
+	node<String,student> minimum(node<String,student> root){
+		node<String,student> min=root;
+		while(root.left!=null) {
+			deletecounter++;
+			min=root.left;
+			root=root.left;
+		}
+		return min;
+	}
+	node<String,student> deletehelp(node<String,student> root,String key){
+		if(root==null) {
+			return null;
+		}
+		else if(key.compareTo(root.key)<0) {
+			deletecounter++;
+			root.left=deletehelp(root.left,key);
+			
+		}
+		else if(key.compareTo(root.key)>0) {
+			deletecounter++;
+			root.right=deletehelp(root.right,key);
+		}
+		else {
+			if(root.left==null) {
+				deletecounter++;
+				return root.right;
+			}
+			else if(root.right==null) {
+				deletecounter++;
+				return root.left;
+			}
+			else {
+				node<String,student> min=minimum(root.right);
+				deletecounter++;
+				root.key=min.key;
+				root.data=min.data;
+				root.right=deletehelp(root.right,min.key);
+			}
+			
+		}
+		return root;
+	}
+	int delete(String key) {
+		deletecounter=0;
+		root=deletehelp(root,key);
+		return deletecounter;
+	}
+	int update(String key,node<String,student> new_node) {
+		updatecounter=0;
+		root=updatehelp(root,key, new_node);
+		return updatecounter++;
+	}
+	node<String,student> updatehelp(node<String,student> root,String key,node<String,student> new_node){
+		if (root.key.equals(key)){
+			updatecounter++;
+			root.key=key;
+			root.data=new_node.data;
+			return root;
+		}
+		else if (key.compareTo(root.key)>0) {
+			updatecounter++;
+			root.right=updatehelp(root.right,key,new_node);
+		}
+		else {
+			updatecounter++;
+			root.left=updatehelp(root.left,key,new_node);
+		}
+		return root;
+		
+	}
+	boolean contains(node<String,student> root,String key) {
+		if(root==null) {
+			return false;
+		}
+		if (root.key.equals(key)){
+			
+			return true;
+		}
+		else if (key.compareTo(root.key)>0) {
+	
+			return contains(root.right,key);
+		}
+		else {
+			
+			return contains(root.left,key);
+		}
+		
+		
+	}
+	node<String,student> get(node<String,student> root,String key) {
+		if(root==null) {
+			return root;
+		}
+		if (root.key.equals(key)){
+			
+			return root;
+		}
+		else if (key.compareTo(root.key)>0) {
+	
+			return get(root.right,key);
+		}
+		else {
+			
+			return get(root.left,key);
+		}
+		
+	}
+	String address(String key) {
+		address="";
+		addresshelp(root,key);
+		return address;
+	}
+	node<String,student> addresshelp(node<String,student> root,String key) {
+		if(root==null) {
+			return null;
+		}
+		if (root.key.equals(key)){
+			return null;
+			
+		}
+		else if (key.compareTo(root.key)>0) {
+			address=address+"R";
+			return addresshelp(root.right,key);
+			
+		}
+		else {
+			address=address+"L";
+			return addresshelp(root.left,key);
+			
+			
+		}
+	}
+}

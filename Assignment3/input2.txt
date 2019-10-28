@@ -1,0 +1,106 @@
+insert y qq sat EE 8.2 
+contains y qq
+address y qq
+insert f qq Nilgiri CS 6.5 
+insert d qq bol CE 6.0 
+insert b qq Satpura EE 8.2 
+insert a qq Nilgiri CS 6.5 
+insert c qq bol CE 6.0 
+insert e qq Satpura EE 8.2 
+insert n qq Nilgiri CS 6.5 
+insert j qq bol CE 6.0 
+insert h qq Satpura EE 8.2
+insert g qq Nilgiri CS 6.5 
+insert i qq bol CE 6.0 
+insert l qq Nilgiri CS 6.5 
+insert k qq Satpura EE 8.2
+insert m qq bol CE 6.0 
+insert o qq Satpura EE 8.2 
+address o qq
+update o qq Nilgiri CE 5.0 
+update k qq Nilgiri CE 5.0 
+update a qq Nilgiri CE 5.0 
+address f qq  
+address d qq  
+address b qq  
+address a qq  
+address c qq  
+address e qq  
+address n qq  
+address j qq  
+address h qq 
+address g qq  
+address i qq  
+address k qq 
+address l qq  
+address m qq  
+address o qq
+delete j qq 
+get f qq
+get a qq
+get j qq
+contains f qq
+contains a qq
+contains j qq
+address f qq  
+address d qq  
+address b qq  
+address a qq  
+address c qq  
+address e qq  
+address n qq  
+address j qq  
+address h qq 
+address g qq  
+address i qq  
+address k qq 
+address l qq  
+address m qq  
+address o qq
+delete j qq 
+delete f qq  
+delete d qq  
+delete b qq  
+delete a qq  
+delete c qq  
+delete e qq  
+delete n qq  
+delete j qq  
+delete h qq 
+delete g qq  
+delete i qq  
+delete k qq 
+delete l qq  
+delete m qq  
+delete o qq
+contains o qq
+insert f qq Nilgiri CS 6.5 
+insert d qq bol CE 6.0 
+insert b qq Satpura EE 8.2 
+insert a qq Nilgiri CS 6.5 
+insert c qq bol CE 6.0 
+insert e qq Satpura EE 8.2 
+insert n qq Nilgiri CS 6.5 
+insert j qq bol CE 6.0 
+insert h qq Satpura EE 8.2
+insert g qq Nilgiri CS 6.5
+insert i qq bol CE 6.0 
+insert k qq Satpura EE 8.2
+insert l qq Nilgiri CS 6.5 
+insert m qq bol CE 6.0 
+insert o qq Satpura EE 8.2
+contains o qq
+update o qq Nilgiri CE 5.0 
+update k qq Nilgiri CE 5.0 
+update a qq Nilgiri CE 5.0
+delete y qq
+get y qq
+get k qq
+get a qq
+get f qq
+get o qq
+addres p qq
+delete f qq
+address f qq
+get f qq
+contains j qq

@@ -1,0 +1,33 @@
+insert f qq Nilgiri CS 6.5 
+insert d qq bol CE 6.0 
+insert b qq Satpura EE 8.2 
+insert a qq Nilgiri CS 6.5 
+insert c qq bol CE 6.0 
+insert e qq Satpura EE 8.2 
+insert n qq Nilgiri CS 6.5 
+insert j qq bol CE 6.0 
+insert h qq Satpura EE 8.2
+insert g qq Nilgiri CS 6.5 
+insert i qq bol CE 6.0 
+insert k qq Satpura EE 8.2
+insert l qq Nilgiri CS 6.5 
+insert m qq bol CE 6.0 
+insert o qq Satpura EE 8.2 
+address f qq  
+address d qq  
+address b qq  
+address a qq  
+address c qq  
+address e qq  
+address n qq  
+address j qq  
+address h qq 
+address g qq  
+address i qq  
+address k qq 
+address l qq  
+address m qq  
+address o qq
+delete j qq 
+address f qq  
+delete f qq
